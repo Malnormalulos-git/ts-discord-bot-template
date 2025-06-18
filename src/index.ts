@@ -1,4 +1,4 @@
-import { Client } from 'discord.js';
+import { Client, GatewayIntentBits } from 'discord.js';
 import loadCommands from "./loadCommands";
 import { ClientWithCommands } from "./types/types";
 import registerEventListeners from "./registerEventListeners";
@@ -8,7 +8,12 @@ dotenv.config();
 const token = process.env.TOKEN;
 
 const client = new Client({
-    intents: ['Guilds', 'GuildMessages', 'GuildMembers', 'MessageContent'],
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.MessageContent
+    ],
 }) as ClientWithCommands;
 
 (async () => {
