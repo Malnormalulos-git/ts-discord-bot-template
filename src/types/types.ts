@@ -8,18 +8,18 @@ import {
     SlashCommandSubcommandsOnlyBuilder
 } from "discord.js";
 
-export interface command {
+export interface Command {
     data: SlashCommandBuilder | SlashCommandOptionsOnlyBuilder | SlashCommandSubcommandsOnlyBuilder,
     execute: (interaction: CommandInteraction) =>  Promise<void>,
     autocomplete?: (interaction: AutocompleteInteraction) => Promise<void>
 }
 
-export interface event {
+export interface Event {
     name: string,
     once?: boolean,
     execute: (...args: any[]) => Promise<void> | void,
 }
 
 export interface ClientWithCommands extends Client {
-    commands: Collection<string, any>
+    commands: Collection<string, Command>
 }

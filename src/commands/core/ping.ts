@@ -1,7 +1,7 @@
 import { SlashCommandBuilder } from "discord.js";
-import { command } from "../../types/types";
+import { Command } from "../../types/types";
 
-const ping: command = {
+const ping: Command = {
     data: new SlashCommandBuilder()
         .setName('ping')
         .setDescription('Replies with Pong!'),

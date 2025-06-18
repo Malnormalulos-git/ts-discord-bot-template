@@ -1,7 +1,7 @@
 import { Events } from "discord.js";
-import { event } from "../types/types";
+import { Event } from "../types/types";
 
-const interactionCreate: event = {
+const interactionCreate: Event = {
     name: Events.InteractionCreate,
     execute: async (interaction) => {
         if (interaction.isChatInputCommand()) {

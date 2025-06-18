@@ -1,7 +1,7 @@
 import { Events } from "discord.js";
-import { event } from "../types/types";
+import { Event } from "../types/types";
 
-const ready: event = {
+const ready: Event = {
     name: Events.ClientReady,
     once: true,
     execute: (client) => {
