@@ -35,10 +35,10 @@ You can see the environment configuration example in `.env.example`. The followi
 ## Scripts
 `npm run dev` - Start the development server with hot reload using tsx
 
-`npm run lint` - Compile TypeScript files to JavaScript in the `dist` directory
+`npm run lint` - Run ESLint to check for code style and quality issues
 
-`npm run lint:fix` - Start the bot using the compiled JavaScript files
+`npm run lint:fix` - Run ESLint and automatically fix fixable issues
 
-`npm run build` - Run ESLint to check for code style and quality issues
+`npm run build` - Compile TypeScript files to JavaScript in the `dist` directory
 
-`npm run start` - Run ESLint and automatically fix fixable issues
+`npm run start` - Start the bot using the compiled JavaScript files
