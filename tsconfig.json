@@ -28,9 +28,6 @@
     "exclude": ["node_modules"],
     "tsc-alias": {
         "resolveFullPaths": true,
-        "verbose": false,
-        "replacers": {
-            "*.ts": "*.js"
-        }
+        "verbose": false
     }
 }
