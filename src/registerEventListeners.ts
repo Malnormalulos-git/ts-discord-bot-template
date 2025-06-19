@@ -17,7 +17,6 @@ async function registerEventListeners(client: ClientWithCommands) {
         const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.ts'));
         for (const file of commandFiles) {
             const filePath = path.join(commandsPath, file);
-            // Перетворюємо абсолютний шлях у file:// URL
             const fileUrl = pathToFileURL(filePath).href;
             const commandModule = await import(fileUrl);
             const command = commandModule.default;
@@ -35,7 +34,6 @@ async function registerEventListeners(client: ClientWithCommands) {
 
     for (const file of eventFiles) {
         const filePath = path.join(eventsPath, file);
-        // Перетворюємо абсолютний шлях у file:// URL
         const fileUrl = pathToFileURL(filePath).href;
         const eventModule = await import(fileUrl);
         const event = eventModule.default;

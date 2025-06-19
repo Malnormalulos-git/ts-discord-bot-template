@@ -29,7 +29,6 @@ async function loadCommands() {
         // Grab the SlashCommandBuilder#toJSON() output of each command's data for deployment
         for (const file of commandFiles) {
             const filePath = path.join(commandsPath, file);
-            // Перетворюємо абсолютний шлях у file:// URL
             const fileUrl = pathToFileURL(filePath).href;
             const commandModule = await import(fileUrl);
             const command = commandModule.default;
