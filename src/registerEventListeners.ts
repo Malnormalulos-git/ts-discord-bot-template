@@ -14,7 +14,7 @@ async function registerEventListeners(client: ClientWithCommands) {
 
     for (const folder of commandFolders) {
         const commandsPath = path.join(foldersPath, folder);
-        const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.ts'));
+        const commandFiles = fs.readdirSync(commandsPath);
         for (const file of commandFiles) {
             const filePath = path.join(commandsPath, file);
             const fileUrl = pathToFileURL(filePath).href;
@@ -30,7 +30,7 @@ async function registerEventListeners(client: ClientWithCommands) {
     }
 
     const eventsPath = path.join(__dirname, 'events');
-    const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.ts'));
+    const eventFiles = fs.readdirSync(eventsPath);
 
     for (const file of eventFiles) {
         const filePath = path.join(eventsPath, file);
