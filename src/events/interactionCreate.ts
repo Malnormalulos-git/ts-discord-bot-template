@@ -1,5 +1,5 @@
-import { Events } from "discord.js";
-import { Event } from "../types/types";
+import {Events} from "discord.js";
+import {Event} from "../types/types";
 
 const interactionCreate: Event = {
     name: Events.InteractionCreate,
